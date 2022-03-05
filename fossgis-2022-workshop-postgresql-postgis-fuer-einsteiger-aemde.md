@@ -1,6 +1,6 @@
 # Workshop PostgreSQL/PostGIS für Einsteiger
 
-[FOSSGIS 2022 Marburg Online Workshop 10. März 2022](https://www.fossgis-konferenz.de/2021/)
+[FOSSGIS 2022 Marburg Online Workshop 10. März 2022](https://www.fossgis-konferenz.de/2022/)
 
 ![](img/fossgis22-logo.png ) ![](img/postgresql_postgis.png)
 
@@ -410,18 +410,16 @@ Der Import erfolgt über die folgenden Schritte:
 
 Neue Tabellen können ganz einfach auch in QGIS erstellt werden. Dies erfolgt über die DB-Verwaltung unter dem Menüpunkt **_Tabelle -> Tabelle erzeugen_**.
 
-
 ![](img/qgis_create_table.png)
+
 
 ### Übung 7: Erstellen der Tabelle standorte via QGIS
 
-* Erstellen Sie in der Datenbank fossgis via QGIS eine einfache Tabelle **_standorte_** für die Austragungsort der FOSSGIS. Die Tabelle benötigt eine eindeutige ID, eine Spalte für den Ort, das Land und das Jahr und eine Geometriespate (POINT, SRID 4326). Erzeugen Sie direkt bei der Erstellung der Tabelle einen räumlichen Index.
-* Erfassen Sie einen Punkt für die FOSSGIS 2021 in Rapperswil.
+* Erstellen Sie in der Datenbank fossgis via QGIS eine einfache Tabelle **_locations_** für die Austragungsort der FOSSGIS. Die Tabelle benötigt eine eindeutige ID, eine Spalte für den Ort, das Land und das Jahr und eine Geometriespate (POINT, SRID 4326). Erzeugen Sie direkt bei der Erstellung der Tabelle einen räumlichen Index.
+* Erfassen Sie einen Punkt für die FOSSGIS 2022 in Marburg.
 * Schauen Sie sich die Tabelle anschließend in pgAdmin an.
 
-
-![](img/qgis_create_table.png)
-
+Hinweis: Über QGIS können sehr einfach auch ohne SQL-Kenntnisse Tabellen in der Datenbank erstellt werden.
 
 ## PostGIS-Funktionen in Aktion
 
@@ -520,7 +518,7 @@ SELECT gid, name, st_pointonsurface(geom)::geometry(point,4326) as geom
 
 #### Übung 10: Distanzberechnung
 
-* Gehen Sie zurück zur Tabelle **_cities_** aus Übung 4. Berechnen Sie die Entfernung von Ihrem Wohnort nach Rapperswil.
+* Gehen Sie zurück zur Tabelle **_cities_** aus Übung 4. Berechnen Sie die Entfernung von Ihrem Wohnort nach Marburg.
 * Nutzen Sie dabei den Spheroid für die Berechnung (Nutzung des Typs **_geography_**)
 * https://postgis.net/docs/ST_Distance.html
 
