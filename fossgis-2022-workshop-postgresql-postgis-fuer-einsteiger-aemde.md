@@ -300,8 +300,8 @@ dropdb -U user demo
 ### Übung 4: Erzeugen und befüllen Sie die Tabelle cities
 
 * Erzeugen Sie eine neuen Tabelle mit dem Namen **_cities_** mit den Spalten gid, name, country und geom (orientieren Sie sich dazu an dem Beispiel der Tabelle **_pois_**)
-* Fügen Sie einen Datensatz für Marburg in die Tabelle mit Hilfe der Funktion ST_MakePoint ein (https://postgis.net/docs/ST_MakePoint.html)
-* Sie finden die Koordinate für Marburg unter https://www.latlong.net/
+* Fügen Sie die Datensatz für Marburg in die Tabelle mit Hilfe der Funktion ST_MakePoint ein (https://postgis.net/docs/ST_MakePoint.html)
+* Fügen Sie für Ihren Wohnort einen neuen Punkt ein. Ermitteln Sie die Koordinate über https://www.laengengrad-breitengrad.de/
 
 
 ```sql
@@ -370,7 +370,8 @@ SELECT ST_AsEWKT(geom), geom FROM cities; -- ohne SRID
 Laden Sie die Ländergrenzen, Bundesländer, städtische Bereiche (urban areas) und Ortschaften (populated places) aus der Datenbank **_natural_earth2_**
 2. Legen Sie eine neue PostGIS-Verbindung für Ihre neue Datenbank **_fossgis_** an
 3. Laden Sie die neuen Tabelle **_cities_**
-4. Fügen Sie für Ihren Wohnort einen neuen Punkt in Ihre Tabelle **_cities_** ein. Nutzen Sie dazu das QGIS Digitalisierung
+4. Fügen Sie über die QGIS Digitalisierung einen neuen Punkt in Ihre Tabelle **_cities_** ein.
+
 
 ![](img/qgis_cities.png)
 
